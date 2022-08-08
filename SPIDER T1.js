@@ -5,13 +5,7 @@ function chance(){
     var id2 = "p2"+p2
     var a = document.getElementById(id1).getAttribute("src")
     var b = document.getElementById(id2).getAttribute("src")
-    var li=[
-        "C:\\Users\\DELL\\Downloads\\IMG1.jpg",
-        "C:\\Users\\DELL\\Downloads\\IMG2.jpg",
-        "C:\\Users\\DELL\\Downloads\\IMG3.jpg",
-        "C:\\Users\\DELL\\Downloads\\IMG4.jpg",
-        "C:\\Users\\DELL\\Downloads\\IMG5.jpg"
-    ]
+    var li=["IMG1.jpg","IMG2.jpg","IMG3.jpg","IMG4.jpg","IMG5.jpg"]
     switch (a) {
         case li[4]:
             document.getElementById(id1).src=li[0]
