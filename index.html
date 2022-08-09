@@ -9,12 +9,33 @@
     <link rel="icon" href="favicon (2).ico">
 </head>
 <body>
-    <h1 id="top">Click on the PLAY button to start ! ATB ! 👍</h1>
-    <table>
+    <div id="tb">
+    <div id="lb">
+    <hr>
+    <p class="lt">**RULES FOR THE GAME**</p>
+    <ul class="lt">
+        <li>It is a two player game.</li>
+        <li>Clicking on play button will start the game. Use PLAY button to play.</li>
+        <li>PLAY button will generate parts of boy one at a time in any random box numbered from 1-5.</li>
+        <li>If the same number generates then the formation of boy in the same block continues.</li>
+        <li>On generation of a complete boy the player will be awarded 5 points.</li>
+        <li>The player who got his all 5 boys generated or 25 points first will win.</li>
+        <li>In braces above the blocks, the random no. grnerated for each player is shown.</li>
+        <li>After giving the name of the two players click on START button to begin.</li>
+    </ul>
+    <hr>
+    <input type="text" placeholder="PLAYER 1" id="n1" class="inp"><br><br>
+    <input type="text" placeholder="PLAYER 2" id="n2" class="inp"><br><br>
+    <button id="tbtn" onclick="changename()">START</button>
+    <hr>
+    </div>
+    <div id="rb">
+    <h1 id="top" class="rbc">Click on the PLAY button to start ! ATB ! 👍</h1>
+    <table class="rbc">
         <thead>
             <th>INDEX</th>
-            <th>PLAYER 1</th>
-            <th>PLAYER 2</th>
+            <th id="p1">PLAYER 1</th>
+            <th id="p2">PLAYER 2</th>
         </thead>
         <tr>
             <td>1</td>
@@ -47,8 +68,10 @@
             <td id="p2s">0</td>
         </tfoot>
     </table>
-    <p id="last">REFRESH TO START AGAIN.</p>
-    <button class="btn" onclick="chance()" id="button">PLAY</button>
+    <p id="last" class="last rbc">REFRESH TO START AGAIN.</p>
+    <button class="btn rbc" onclick="chance()" id="button">PLAY</button>
     <script type="text/javascript" src="SPIDER T1.js"></script>
+    </div>
+    </div>
 </body>
 </html>
