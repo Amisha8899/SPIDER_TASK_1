@@ -6,6 +6,9 @@ function chance(){
     var a = document.getElementById(id1).getAttribute("src")
     var b = document.getElementById(id2).getAttribute("src")
     var li=["IMG1.jpg","IMG2.jpg","IMG3.jpg","IMG4.jpg","IMG5.jpg"]
+    var p1n = document.getElementById("p1").innerHTML
+    var p2n = document.getElementById("p2").innerHTML
+    document.getElementById("top").innerHTML= p1n+"("+p1+")"+" VS "+p2n+"("+p2+")"
     switch (a) {
         case li[4]:
             document.getElementById(id1).src=li[0]
@@ -26,7 +29,8 @@ function chance(){
             break;
     }
     if(document.getElementById("p1s").innerHTML==25){
-        document.getElementById("top").innerHTML ="Congrats!! Player 1 won🚩"
+        var e = document.getElementById("n1").value.toUpperCase()
+        document.getElementById("top").innerHTML ="Congrats!! "+ e +" won🚩"
         document.getElementById("last").style.visibility="visible"
         document.getElementById("button").remove()
     }
@@ -50,8 +54,20 @@ function chance(){
             break;
     }
     if(document.getElementById("p2s").innerHTML==25){
-        document.getElementById("top").textContent ="Congrats!! Player 2 won🚩"
+        var f = document.getElementById("n2").value.toUpperCase()
+        document.getElementById("top").textContent ="Congrats!! " +f+ " won🚩"
         document.getElementById("last").style.visibility="visible"
         document.getElementById("button").remove()
+    }
+}
+function changename(){
+    if(document.getElementById("n1").value.trim().length===0 || document.getElementById("n2").value.trim().length===0 ){
+        alert("Enter proper names for players !!!")
+    }
+    else{
+    document.getElementById("p1").innerHTML=document.getElementById("n1").value.toUpperCase()
+    document.getElementById("p2").innerHTML=document.getElementById("n2").value.toUpperCase()
+    document.getElementById("lb").style.visibility="hidden"
+    document.getElementById("rb").style.visibility="visible"
     }
 }
